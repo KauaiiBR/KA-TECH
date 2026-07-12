@@ -1,0 +1,6 @@
+{
+  "name": "KA Tech Solutions",
+  "description": "Site institucional de alta conversão para a KA Tech Solutions em Pirapora, MG, oferecendo desenvolvimento de sites, automações, landing pages e sistemas ERP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
