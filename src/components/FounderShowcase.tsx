@@ -44,9 +44,6 @@ export default function FounderShowcase() {
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
             Quem <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-100 to-[#7C3AED]">Faz Acontecer</span>
           </h2>
-          <p className="text-sm sm:text-base text-gray-400 font-sans max-w-xl mx-auto">
-            Em vez de depoimentos genéricos ou fictícios, apresentamos capacidade técnica real, transparência absoluta e o portfólio do nosso fundador.
-          </p>
         </div>
 
         {/* Core Showcase Grid */}
