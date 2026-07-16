@@ -16,7 +16,7 @@ export default function Header({ onOpenBudgetModal }: HeaderProps) {
       setIsScrolled(window.scrollY > 20);
 
       // Track active section on scroll
-      const sections = ['inicio', 'servicos', 'diferenciais', 'depoimentos', 'contato'];
+      const sections = ['inicio', 'servicos', 'diferenciais', 'fundador', 'contato'];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -40,7 +40,7 @@ export default function Header({ onOpenBudgetModal }: HeaderProps) {
     { id: 'inicio', label: 'Início' },
     { id: 'servicos', label: 'Serviços' },
     { id: 'diferenciais', label: 'Diferenciais' },
-    { id: 'depoimentos', label: 'Depoimentos' },
+    { id: 'fundador', label: 'Fundador' },
     { id: 'contato', label: 'Contato' }
   ];
 

@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Differentials from './components/Differentials';
-import Testimonials from './components/Testimonials';
+import FounderShowcase from './components/FounderShowcase';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import BudgetModal from './components/BudgetModal';
@@ -53,8 +53,8 @@ export default function App() {
         {/* Business Differentials */}
         <Differentials />
 
-        {/* Client Testimonials */}
-        <Testimonials />
+        {/* Founder Showcase */}
+        <FounderShowcase />
 
         {/* Lead and Contact Form + Local database inspector */}
         <ContactForm initialSubject={modalPresetService} />
