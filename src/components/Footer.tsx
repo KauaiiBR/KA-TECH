@@ -102,8 +102,8 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleFooterNavClick('depoimentos')} className="hover:text-white transition-colors cursor-pointer">
-                  Histórias de Clientes
+                <button onClick={() => handleFooterNavClick('fundador')} className="hover:text-white transition-colors cursor-pointer">
+                  Sobre o Fundador
                 </button>
               </li>
               <li>
@@ -138,17 +138,15 @@ export default function Footer() {
           {/* Col 4: Regional Base */}
           <div className="text-left flex flex-col space-y-4">
             <h4 className="font-display font-bold text-xs uppercase tracking-widest text-[#7C3AED]">
-              Base Operacional
+              Atendimento Regional
             </h4>
             <div className="space-y-3 text-xs text-gray-400 font-sans leading-relaxed">
               <p className="font-bold text-white uppercase tracking-wide">
-                KA Tech Solutions Ltda.
+                KA Tech Solutions
               </p>
               <p>
-             <br />
-
-              </p>
-              <p className="text-[10px] text-gray-500 font-mono">
+                Pirapora, MG e região norte-mineira.<br />
+                Atendimento 100% online ou presencial com visitas agendadas diretamente no seu estabelecimento.
               </p>
             </div>
           </div>
