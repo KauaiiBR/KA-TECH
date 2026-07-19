@@ -145,11 +145,10 @@ export default function Footer() {
                 KA Tech Solutions Ltda.
               </p>
               <p>
-                Pirapora, MG — Centro Comercial <br />
-                CEP 39270-000
+             <br />
+
               </p>
               <p className="text-[10px] text-gray-500 font-mono">
-                CNPJ Fictício: 00.000.000/0001-00
               </p>
             </div>
           </div>
