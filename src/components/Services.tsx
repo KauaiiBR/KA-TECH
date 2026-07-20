@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monitor, Cpu, Zap, BarChart3, CheckSquare } from 'lucide-react';
+import { Monitor, Cpu, Zap, BarChart3, CheckSquare, Wrench } from 'lucide-react';
 import { motion } from 'motion/react';
 import { SERVICES } from '../data';
 
@@ -13,7 +13,8 @@ export default function Services({ onSelectService }: ServicesProps) {
     Monitor: Monitor,
     Cpu: Cpu,
     Zap: Zap,
-    BarChart3: BarChart3
+    BarChart3: BarChart3,
+    Wrench: Wrench
   };
 
   return (

@@ -48,6 +48,19 @@ export const SERVICES: ServiceItem[] = [
       'Emissão de relatórios em tempo real e gráficos dinâmicos',
       'Gerenciamento simplificado de equipe e comissões'
     ]
+  },
+  {
+    id: 'suporte-ti-computadores',
+    iconName: 'Wrench',
+    title: 'Assistência Técnica & Computadores',
+    description: 'Montagem, conserto e manutenção de computadores de alto desempenho, além de otimização de sistemas, Wi-Fi e upgrades de hardware.',
+    features: [
+      'Montagem profissional de computadores gamers, de escritório e estúdios',
+      'Conserto completo, troca de peças, limpeza profunda e diagnóstico',
+      'Formatação otimizada com backup seguro dos seus arquivos importantes',
+      'Instalação de upgrades de alta velocidade (SSD, Memória RAM, Processadores)',
+      'Configuração rápida de redes locais e troca de senhas de Wi-Fi doméstico e comercial'
+    ]
   }
 ];
 

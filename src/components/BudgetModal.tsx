@@ -41,7 +41,8 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
     'Criação de Sites Comerciais',
     'Automações de Processos',
     'Landing Pages de Alta Conversão',
-    'Sistema ERP + Painel de Vendas'
+    'Sistema ERP + Painel de Vendas',
+    'Assistência Técnica & Computadores'
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
