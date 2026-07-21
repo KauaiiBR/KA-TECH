@@ -135,20 +135,15 @@ export default function Hero({ onCtaClick }: HeroProps) {
                   <div className="bg-[#181818] border border-white/5 rounded-lg p-2.5 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] font-mono text-[#7C3AED] uppercase font-bold tracking-widest">Impacto Digital</span>
-                      <span className="text-[9px] font-semibold text-green-500 font-mono">+450%</span>
                     </div>
                     <div className="flex items-baseline">
                       <span className="text-sm font-black text-white font-display">Visibilidade & Atração</span>
-                    </div>
-                    <div className="w-full bg-neutral-800 h-1 rounded-full overflow-hidden">
-                      <div className="bg-[#7C3AED] h-full rounded-full w-[85%]" />
                     </div>
                   </div>
 
                   <div className="bg-[#181818] border border-white/5 rounded-lg p-2.5 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] font-mono text-[#7C3AED] uppercase font-bold tracking-widest">Resultados Estimados</span>
-                      <span className="text-[9px] font-semibold text-green-500 font-mono">Alta</span>
                     </div>
                     <div className="flex items-baseline">
                       <span className="text-sm font-black text-white font-display">Aceleração de Vendas</span>
@@ -158,20 +153,18 @@ export default function Hero({ onCtaClick }: HeroProps) {
                   <div className="bg-[#181818] border border-white/5 rounded-lg p-2.5 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] font-mono text-[#7C3AED] uppercase font-bold tracking-widest">Potencial de Crescimento</span>
-                      <span className="text-[9px] font-semibold text-purple-400 font-mono">5x Mais</span>
                     </div>
                     <div className="flex items-baseline">
                       <span className="text-sm font-black text-white font-display">Escala de Negócios</span>
-                    </div>
-                    <div className="w-full bg-neutral-800 h-1 rounded-full overflow-hidden">
-                      <div className="bg-[#7C3AED] h-full rounded-full w-[95%]" />
                     </div>
                   </div>
 
                   <div className="bg-[#181818] border border-white/5 rounded-lg p-2.5 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[9px] font-mono text-[#7C3AED] uppercase font-bold tracking-widest">Performance do Seu Negócio</span>
-                      <span className="text-[9px] text-green-500 font-mono">100%</span>
+                    </div>
+                    <div className="flex items-baseline">
+                      <span className="text-sm font-black text-white font-display">Sistemas de Alta Qualidade</span>
                     </div>
                   </div>
                 </div>
