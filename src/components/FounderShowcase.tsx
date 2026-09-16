@@ -89,26 +89,6 @@ export default function FounderShowcase() {
                     Acredito que o comércio e os prestadores de serviços de Pirapora e região merecem tecnologia de ponta, sem enrolação e sem amarras. Por isso, fundei a KA Tech com um objetivo claro: <strong className="text-white font-medium">unir design impecável, código de alta performance e transparência total</strong>.
                   </p>
                 </div>
-
-                {/* Skills Showcase list */}
-                <div className="space-y-3 pt-4 border-t border-neutral-700">
-                  <h4 className="text-sm font-mono text-gray-300 uppercase tracking-widest font-semibold">
-                    Habilidades Destacadas
-                  </h4>
-                  <div className="space-y-2">
-                    {skills.map((skill, index) => (
-                      <div key={index} className="flex items-center justify-between text-sm bg-black/40 border border-neutral-700 rounded px-3 py-2">
-                        <span className="text-gray-200 flex items-center space-x-2">
-                          <CheckCircle2 size={14} className="text-[#7C3AED]" />
-                          <span>{skill.name}</span>
-                        </span>
-                        <span className="text-[10px] font-mono text-purple-400 font-semibold uppercase tracking-wider">
-                          {skill.level}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
 
               {/* Action portfolio Button */}
