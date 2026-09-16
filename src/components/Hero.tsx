@@ -51,7 +51,7 @@ export default function Hero({ onCtaClick }: HeroProps) {
               className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-white leading-tight tracking-tight drop-shadow-lg uppercase"
             >
               Tecnologia que <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-purple-500 to-[#A78BFA] drop-shadow-[0_0_30px_rgba(124,58,237,0.2)]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C4B5FD] via-[#E9D5FF] to-[#A78BFA] drop-shadow-[0_0_36px_rgba(196,181,253,0.35)]">
                 Impulsiona Resultados
               </span>
             </motion.h1>
