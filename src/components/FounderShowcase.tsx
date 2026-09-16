@@ -147,9 +147,9 @@ export default function FounderShowcase() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={index}
-                  className="flex items-start space-x-4 rounded-xl bg-[#1c1c1c] border border-neutral-700 p-5 hover:border-neutral-600 transition-colors duration-300"
+                  className="flex items-start space-x-4 rounded-xl bg-[#1c1c1c] border border-neutral-700 p-5 hover:border-[#10B981]/30 transition-all duration-300 hover:shadow-[0_0_15px_rgba(16,185,129,0.1)]"
                 >
-                  <div className="flex-shrink-0 p-2.5 rounded-lg bg-[#7C3AED]/10 border border-[#7C3AED]/20">
+                  <div className="flex-shrink-0 p-2.5 rounded-lg bg-[#7C3AED]/10 border border-[#7C3AED]/20 group-hover:bg-[#10B981]/15 group-hover:border-[#10B981]/40 transition-all duration-300">
                     {pillar.icon}
                   </div>
                   <div className="space-y-1">

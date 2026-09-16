@@ -46,18 +46,18 @@ export default function Differentials() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 key={diff.id}
-                className="group relative rounded-lg bg-[#1c1c1c] border border-neutral-700 p-6 hover:border-[#7C3AED]/30 transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+                className="group relative rounded-lg bg-[#1c1c1c] border border-neutral-700 p-6 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
                 id={`differential-card-${diff.id}`}
               >
                 <div className="space-y-4">
                   {/* Icon badge */}
-                  <div className="flex items-center justify-center w-12 h-12 rounded bg-[#252525] border border-white/10 text-[#7C3AED] group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(124,58,237,0.2)] transition-all duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 rounded bg-[#252525] border border-white/10 text-[#7C3AED] group-hover:bg-[#10B981]/15 group-hover:border-[#10B981]/50 group-hover:text-[#10B981] group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.25)] transition-all duration-300">
                     <IconComp size={22} />
                   </div>
 
                   {/* Title and description */}
                   <div className="space-y-2">
-                    <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-wide group-hover:text-[#7C3AED] transition-colors duration-300">
+                    <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-wide group-hover:text-[#10B981] transition-colors duration-300">
                       {diff.title}
                     </h3>
                     <p className="text-sm sm:text-base text-gray-300 font-sans leading-relaxed">
@@ -67,7 +67,7 @@ export default function Differentials() {
                 </div>
 
                 {/* Left accent vertical neon marker bar */}
-                <div className="absolute top-4 bottom-4 left-0 w-[2px] bg-[#7C3AED] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center" />
+                <div className="absolute top-4 bottom-4 left-0 w-[2px] bg-[#10B981] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-center" />
               </motion.div>
             );
           })}
