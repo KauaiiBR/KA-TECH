@@ -135,9 +135,6 @@ export default function FounderShowcase() {
           {/* Right Column: Projects Grid (7 cols) */}
           <div className="lg:col-span-8 flex flex-col justify-center space-y-7">
             <div className="space-y-3">
-              <span className="inline-flex items-center w-fit rounded-full border border-[#10B981]/25 bg-[#10B981]/10 px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-[#10B981]">
-                Portfólio real
-              </span>
               <h3 className="font-display font-black text-3xl text-white uppercase tracking-tight">
                 Projetos Desenvolvidos
               </h3>
