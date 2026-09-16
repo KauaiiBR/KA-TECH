@@ -73,16 +73,16 @@ export default function FounderShowcase() {
         </div>
 
         {/* Core Showcase Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Founder Profile Card (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <div className="lg:col-span-4 flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-full flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#1c1c1c] to-[#141414] border border-neutral-700 p-8 shadow-2xl overflow-hidden group"
+              className="relative flex flex-col rounded-2xl bg-gradient-to-b from-[#1c1c1c] to-[#141414] border border-neutral-700 p-8 shadow-2xl overflow-hidden group"
             >
               {/* Decorative light effect */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#7C3AED]/10 rounded-full filter blur-3xl group-hover:bg-[#7C3AED]/20 transition-all duration-500" />
@@ -133,7 +133,7 @@ export default function FounderShowcase() {
           </div>
 
           {/* Right Column: Projects Grid (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-7">
+          <div className="lg:col-span-8 flex flex-col justify-center space-y-7">
             <div className="space-y-3">
               <span className="inline-flex items-center w-fit rounded-full border border-[#10B981]/25 bg-[#10B981]/10 px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-[#10B981]">
                 Portfólio real
@@ -147,7 +147,7 @@ export default function FounderShowcase() {
             </div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
               {projects.map((project) => {
                 const ProjectIcon = project.icon;
 
