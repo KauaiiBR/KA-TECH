@@ -127,43 +127,8 @@ export default function FounderShowcase() {
             </motion.div>
           </div>
 
-          {/* Right Column: Pillars & Values (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
-            <div className="space-y-6">
-              <h3 className="font-display font-bold text-2xl text-white tracking-tight">
-                Como garantimos resultados extraordinários para o seu negócio?
-              </h3>
-              <p className="text-sm sm:text-base text-gray-400 leading-relaxed font-sans font-light">
-                Desenvolvemos soluções robustas que realmente resolvem seus problemas cotidianos de vendas, estoque, atração de clientes e fluxos internos de trabalho. Nosso compromisso é com a qualidade do software e com a clareza do processo.
-              </p>
-            </div>
-
-            {/* Core pillars grid */}
-            <div className="grid grid-cols-1 gap-5">
-              {pillars.map((pillar, index) => (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  key={index}
-                  className="flex items-start space-x-4 rounded-xl bg-[#1c1c1c] border border-neutral-700 p-5 hover:border-[#10B981]/30 transition-all duration-300 hover:shadow-[0_0_15px_rgba(16,185,129,0.1)]"
-                >
-                  <div className="flex-shrink-0 p-2.5 rounded-lg bg-[#7C3AED]/10 border border-[#7C3AED]/20 group-hover:bg-[#10B981]/15 group-hover:border-[#10B981]/40 transition-all duration-300">
-                    {pillar.icon}
-                  </div>
-                  <div className="space-y-1">
-                    <h4 className="font-display font-bold text-base text-white sm:text-lg">
-                      {pillar.title}
-                    </h4>
-                    <p className="text-sm sm:text-base text-gray-300 font-sans font-light leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
+          {/* Right Column: Portfolio CTA (7 cols) */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
             {/* Quick quote block */}
             <div className="rounded-xl border-2 border-[#7C3AED]/30 p-6 bg-gradient-to-r from-[#1c082f] via-[#0F0D0E] to-[#121212] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_0_30px_rgba(124,58,237,0.1)]">
               <div className="space-y-2">
