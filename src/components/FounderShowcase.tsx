@@ -1,31 +1,56 @@
-import { ExternalLink, Code2, Sparkles, Cpu, Layers, CheckCircle2, User, Globe, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Globe, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import fundadorPhoto from '../assets/images/fundador.png';
 
 export default function FounderShowcase() {
-  const skills = [
-    { name: 'Desenvolvimento Web Full-Stack', level: 'Especialista' },
-    { name: 'Criação de Landing Pages & SEO', level: 'Alta Conversão' },
-    { name: 'Automações de Processos & APIs', level: 'Otimização' },
-    { name: 'Sistemas ERP & Dashboards de Vendas', level: 'Completo' },
-    { name: 'UI/UX & Design de Interfaces', level: 'Pixel Perfect' },
-  ];
-
-  const pillars = [
+  const projects = [
     {
-      icon: <Code2 className="text-[#7C3AED]" size={20} />,
-      title: 'Transparência em Primeiro Lugar',
-      description: 'Diferente de agências que usam avaliações falsas, acreditamos na integridade. Nossa garantia é a qualidade técnica comprovada por portfólio real.',
+      title: 'KA Tech Solutions',
+      description: 'Site institucional completo para empresa de tecnologia, com orçamento rápido, formulário e apresentação profissional.',
+      url: 'https://ka-tech.onrender.com',
+      icon: 'fas fa-bolt',
+      gradient: 'from-[#7C3AED] to-[#1a1a1a]',
+      tags: ['React', 'Vite', 'Tailwind'],
     },
     {
-      icon: <Cpu className="text-[#7C3AED]" size={20} />,
-      title: 'Tecnologia sob Medida',
-      description: 'Sistemas limpos, rápidos e que resolvem gargalos operacionais específicos do comércio e serviços locais.',
+      title: 'KARPE Company',
+      description: 'E-commerce com catálogo, carrinho, integração administrativa e identidade visual moderna para marca jovem.',
+      url: 'https://karpcompany.netlify.app',
+      icon: 'fas fa-shopping-cart',
+      gradient: 'from-[#1a1a1a] to-[#2d2d2d]',
+      tags: ['E-commerce', 'Node.js', 'API'],
     },
     {
-      icon: <Sparkles className="text-[#7C3AED]" size={20} />,
-      title: 'Parceria de Verdade',
-      description: 'Trabalho focado no faturamento da sua empresa. Suporte próximo, rápido e direto com quem constrói a sua solução.',
+      title: 'Barbearia Blade',
+      description: 'Site premium para barbearia com estética clássica, agendamento online e experiência responsiva.',
+      url: 'https://barbearia-blade.netlify.app',
+      icon: 'fas fa-cut',
+      gradient: 'from-[#c9a96e] to-[#1a1a1a]',
+      tags: ['Next.js', 'Tailwind', 'MongoDB'],
+    },
+    {
+      title: 'Sonic Pizzas',
+      description: 'Landing page comercial para pizzaria com cardápio, visual chamativo e pedido via WhatsApp.',
+      url: 'https://sonicpizzas.netlify.app',
+      icon: 'fas fa-pizza-slice',
+      gradient: 'from-[#e63946] to-[#1a1a1a]',
+      tags: ['HTML', 'CSS', 'WhatsApp'],
+    },
+    {
+      title: 'Restaurante Elegante',
+      description: 'Site institucional para restaurante com cardápio digital, galeria, reservas e visual sofisticado.',
+      url: 'https://restauranteelegancy.netlify.app',
+      icon: 'fas fa-utensils',
+      gradient: 'from-[#2d2d2d] to-[#1a1a1a]',
+      tags: ['HTML', 'CSS', 'Responsivo'],
+    },
+    {
+      title: 'Trajetória Descubra+',
+      description: 'Sistema de hackathon com login, perfis de simulação, dashboard e trilhas de inclusão profissional.',
+      url: 'https://descubramais.netlify.app',
+      icon: 'fas fa-rocket',
+      gradient: 'from-[#10B981] to-[#1a1a1a]',
+      tags: ['React', 'Dashboard', 'Auth'],
     },
   ];
 
@@ -108,89 +133,64 @@ export default function FounderShowcase() {
           </div>
 
           {/* Right Column: Projects Grid (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
-            <div className="space-y-2">
-              <h3 className="font-display font-bold text-2xl text-white tracking-tight">
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-7">
+            <div className="space-y-3">
+              <span className="inline-flex items-center w-fit rounded-full border border-[#10B981]/25 bg-[#10B981]/10 px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-[#10B981]">
+                Portfólio real
+              </span>
+              <h3 className="font-display font-black text-3xl text-white uppercase tracking-tight">
                 Projetos Desenvolvidos
               </h3>
-              <p className="text-sm text-gray-400 font-sans">
-                Conheça alguns dos sistemas e sites que já entregamos.
+              <p className="text-base text-gray-300 font-sans leading-relaxed">
+                Uma vitrine dos projetos entregues, com links diretos para você navegar e avaliar o resultado final.
               </p>
             </div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {/* KA Tech */}
-              <a href="https://ka-tech.onrender.com" target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-bolt text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">KA Tech</h4>
-                  <p className="text-[10px] text-gray-500 mt-1">React • Vite • Tailwind</p>
-                </div>
-              </a>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {projects.map((project) => (
+                <a
+                  key={project.title}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden rounded-2xl bg-[#1c1c1c] border border-neutral-700 transition-all duration-300 hover:-translate-y-1 hover:border-[#10B981]/50 hover:shadow-[0_18px_45px_rgba(16,185,129,0.14)]"
+                >
+                  <div className={`relative h-28 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.20),transparent_35%)] opacity-70" />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-[#10B981]/10 transition-colors duration-300" />
+                    <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-white/15 bg-black/25 shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                      <i className={`${project.icon} text-2xl text-white`}></i>
+                    </div>
+                  </div>
 
-              {/* KARPE */}
-              <a href="https://karpcompany.netlify.app" target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-shopping-cart text-[#7C3AED] text-lg"></i>
-                </div>
-                <div>
-                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">KARPE</h4>
-                  <p className="text-[10px] text-gray-500 mt-1">E-commerce • Node.js</p>
-                </div>
-              </a>
+                  <div className="space-y-3 p-5">
+                    <div className="flex items-start justify-between gap-3">
+                      <h4 className="font-display text-lg font-black uppercase leading-tight text-white transition-colors duration-300 group-hover:text-[#10B981]">
+                        {project.title}
+                      </h4>
+                      <ExternalLink size={16} className="mt-1 shrink-0 text-gray-500 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#10B981]" />
+                    </div>
 
-              {/* Barbearia Blade */}
-              <a href="https://barbearia-blade.netlify.app" target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#c9a96e] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-cut text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Barbearia</h4>
-                  <p className="text-[10px] text-gray-500 mt-1">Next.js • MongoDB</p>
-                </div>
-              </a>
+                    <p className="min-h-[60px] text-sm leading-relaxed text-gray-300">
+                      {project.description}
+                    </p>
 
-              {/* Sonic Pizzas */}
-              <a href="https://sonicpizzas.netlify.app" target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#e63946] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-pizza-slice text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Sonic</h4>
-                  <p className="text-[10px] text-gray-500 mt-1">HTML • CSS • JS</p>
-                </div>
-              </a>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="rounded-full border border-neutral-700 bg-black/25 px-2.5 py-1 text-[10px] font-mono font-bold uppercase tracking-wider text-gray-300 group-hover:border-[#10B981]/30 group-hover:text-[#10B981] transition-colors duration-300">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
 
-              {/* Restaurante */}
-              <a href="https://restauranteelegancy.netlify.app" target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-utensils text-[#D4AF37] text-lg"></i>
-                </div>
-                <div>
-                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Restaurante</h4>
-                  <p className="text-[10px] text-gray-500 mt-1">HTML • CSS • JS</p>
-                </div>
-              </a>
-
-              {/* Descubra+ */}
-              <a href="https://descubramais.netlify.app" target="_blank" rel="noopener noreferrer"
-                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#10B981] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                  <i className="fas fa-rocket text-white text-lg"></i>
-                </div>
-                <div>
-                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Descubra+</h4>
-                  <p className="text-[10px] text-gray-500 mt-1">React • Dashboard</p>
-                </div>
-              </a>
+                    <div className="flex items-center gap-2 pt-2 text-xs font-display font-bold uppercase tracking-widest text-white transition-colors duration-300 group-hover:text-[#10B981]">
+                      <span>Acessar projeto</span>
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
 
             {/* Ver portfólio completo */}
