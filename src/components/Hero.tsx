@@ -52,9 +52,8 @@ export default function Hero({ onCtaClick }: HeroProps) {
             >
               Tecnologia que <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7C3AED] via-purple-500 to-[#A78BFA] drop-shadow-[0_0_30px_rgba(124,58,237,0.2)]">
-                Acelera seu Negócio
-              </span> <br />
-              em Pirapora
+                Impulsiona Resultados
+              </span>
             </motion.h1>
 
             <motion.p
