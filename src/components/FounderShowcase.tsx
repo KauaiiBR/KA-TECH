@@ -127,28 +127,102 @@ export default function FounderShowcase() {
             </motion.div>
           </div>
 
-          {/* Right Column: Portfolio CTA (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Quick quote block */}
-            <div className="rounded-xl border-2 border-[#7C3AED]/30 p-6 bg-gradient-to-r from-[#1c082f] via-[#0F0D0E] to-[#121212] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_0_30px_rgba(124,58,237,0.1)]">
-              <div className="space-y-2">
-                <span className="text-base font-mono uppercase tracking-widest text-[#7C3AED] font-bold">
-                  Quer ver os projetos desenvolvidos?
-                </span>
-                <p className="text-lg text-gray-200 font-sans">
-                  Acesse o portfólio completo do Kauã — sistemas, landing pages, automações e mais.
-                </p>
-              </div>
-              <a
-                href="https://kauapaixaoport.netlify.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-base text-white hover:text-[#7C3AED] font-bold uppercase tracking-wider transition-colors py-3 px-5 border-2 border-[#7C3AED]/40 hover:border-[#7C3AED] rounded-lg bg-[#7C3AED]/10 hover:bg-[#7C3AED]/20 shadow-[0_0_15px_rgba(124,58,237,0.15)]"
-              >
-                <span>Abrir Portfólio</span>
-                <ExternalLink size={16} />
+          {/* Right Column: Projects Grid (7 cols) */}
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+            <div className="space-y-2">
+              <h3 className="font-display font-bold text-2xl text-white tracking-tight">
+                Projetos Desenvolvidos
+              </h3>
+              <p className="text-sm text-gray-400 font-sans">
+                Conheça alguns dos sistemas e sites que já entregamos.
+              </p>
+            </div>
+
+            {/* Projects Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {/* KA Tech */}
+              <a href="https://ka-tech.onrender.com" target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-bolt text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">KA Tech</h4>
+                  <p className="text-[10px] text-gray-500 mt-1">React • Vite • Tailwind</p>
+                </div>
+              </a>
+
+              {/* KARPE */}
+              <a href="https://karpcompany.netlify.app" target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-shopping-cart text-[#7C3AED] text-lg"></i>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">KARPE</h4>
+                  <p className="text-[10px] text-gray-500 mt-1">E-commerce • Node.js</p>
+                </div>
+              </a>
+
+              {/* Barbearia Blade */}
+              <a href="https://barbearia-blade.netlify.app" target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#c9a96e] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-cut text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Barbearia</h4>
+                  <p className="text-[10px] text-gray-500 mt-1">Next.js • MongoDB</p>
+                </div>
+              </a>
+
+              {/* Sonic Pizzas */}
+              <a href="https://sonicpizzas.netlify.app" target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#e63946] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-pizza-slice text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Sonic</h4>
+                  <p className="text-[10px] text-gray-500 mt-1">HTML • CSS • JS</p>
+                </div>
+              </a>
+
+              {/* Restaurante */}
+              <a href="https://restauranteelegancy.netlify.app" target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#2d2d2d] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-utensils text-[#D4AF37] text-lg"></i>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Restaurante</h4>
+                  <p className="text-[10px] text-gray-500 mt-1">HTML • CSS • JS</p>
+                </div>
+              </a>
+
+              {/* Descubra+ */}
+              <a href="https://descubramais.netlify.app" target="_blank" rel="noopener noreferrer"
+                className="group relative rounded-xl bg-[#1c1c1c] border border-neutral-700 p-4 hover:border-[#10B981]/40 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] flex flex-col items-center text-center space-y-3">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#10B981] to-[#1a1a1a] flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                  <i className="fas fa-rocket text-white text-lg"></i>
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-xs text-white uppercase group-hover:text-[#10B981] transition-colors">Descubra+</h4>
+                  <p className="text-[10px] text-gray-500 mt-1">React • Dashboard</p>
+                </div>
               </a>
             </div>
+
+            {/* Ver portfólio completo */}
+            <a
+              href="https://kauapaixaoport.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-2 text-sm text-white hover:text-[#10B981] font-bold uppercase tracking-wider transition-colors py-3 px-5 border border-neutral-700 hover:border-[#10B981]/40 rounded-lg bg-[#1c1c1c] hover:bg-[#10B981]/5"
+            >
+              <span>Ver Portfólio Completo</span>
+              <ExternalLink size={14} />
+            </a>
           </div>
 
         </div>
