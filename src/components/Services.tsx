@@ -44,6 +44,7 @@ export default function Services({ onSelectService }: ServicesProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id="services-grid">
           {SERVICES.map((srv, index) => {
             const IconComponent = iconMap[srv.iconName] || Monitor;
+            const isLastOdd = index === SERVICES.length - 1 && SERVICES.length % 2 !== 0;
             return (
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -51,7 +52,7 @@ export default function Services({ onSelectService }: ServicesProps) {
                 viewport={{ once: true, margin: '-100px' }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={srv.id}
-                className="group relative rounded-xl bg-gradient-to-b from-[#141414] to-[#0D0D0D] border border-neutral-900 p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#7C3AED]/40 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.6)] shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+                className={`group relative rounded-xl bg-gradient-to-b from-[#1c1c1c] to-[#141414] border border-neutral-700 p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-[#7C3AED]/40 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,0,0,0.6)] shadow-[0_4px_20px_rgba(0,0,0,0.4)] ${isLastOdd ? 'md:col-span-2 md:max-w-xl md:mx-auto w-full' : ''}`}
                 id={`service-card-${srv.id}`}
               >
                 {/* Purple subtle gradient glow effect on Hover */}
@@ -60,8 +61,8 @@ export default function Services({ onSelectService }: ServicesProps) {
                 <div className="space-y-6">
                   {/* Top line with Icon and index count */}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center justify-center w-12 h-12 rounded bg-gradient-to-br from-[#1C1C1C] to-black border border-white/5 text-[#7C3AED] group-hover:bg-[#7C3AED]/10 group-hover:border-[#7C3AED]/50 transition-all duration-300 shadow-md">
-                      <IconComponent size={24} className="group-hover:scale-110 transition-transform duration-300" />
+                    <div className="flex items-center justify-center w-12 h-12 rounded bg-gradient-to-br from-[#252525] to-[#1a1a1a] border border-white/10 text-[#7C3AED] group-hover:bg-[#7C3AED]/10 group-hover:border-[#7C3AED]/50 transition-all duration-300 shadow-md">
+                      <IconComponent size={26} className="group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <span className="text-[10px] font-mono font-bold text-gray-600 tracking-widest uppercase">
                       KA_TECH // 0{index + 1}
@@ -70,19 +71,19 @@ export default function Services({ onSelectService }: ServicesProps) {
 
                   {/* Title and description */}
                   <div className="space-y-2">
-                    <h3 className="font-display font-black text-xl sm:text-2xl text-white uppercase group-hover:text-[#7C3AED] transition-colors duration-300">
+                    <h3 className="font-display font-black text-2xl sm:text-3xl text-white uppercase group-hover:text-[#7C3AED] transition-colors duration-300">
                       {srv.title}
                     </h3>
-                    <p className="text-sm text-gray-400 font-sans leading-relaxed">
+                    <p className="text-base text-gray-300 font-sans leading-relaxed">
                       {srv.description}
                     </p>
                   </div>
 
                   {/* Checklist items */}
-                  <div className="space-y-2 pt-2 border-t border-neutral-900 group-hover:border-[#7C3AED]/10 transition-colors duration-300">
+                  <div className="space-y-2 pt-3 border-t border-neutral-700 group-hover:border-[#7C3AED]/20 transition-colors duration-300">
                     {srv.features.map((feature, fIdx) => (
-                      <div key={fIdx} className="flex items-start space-x-2 text-xs sm:text-sm text-gray-300 font-sans">
-                        <CheckSquare size={14} className="text-[#7C3AED] mt-0.5 shrink-0" />
+                      <div key={fIdx} className="flex items-start space-x-2 text-sm text-gray-200 font-sans">
+                        <CheckSquare size={15} className="text-[#7C3AED] mt-0.5 shrink-0" />
                         <span>{feature}</span>
                       </div>
                     ))}

@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Phone, MessageSquareCode, Heart } from 'lucide-react';
+import kaTechLogo from '../assets/images/LogoPrincipal.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,7 +21,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#050505] border-t border-neutral-900 pt-16 pb-8 relative overflow-hidden" id="rodape">
+    <footer className="bg-[#0A0A0A] border-t border-neutral-700 pt-16 pb-8 relative overflow-hidden" id="rodape">
       {/* Background graphic touch */}
       <div className="absolute inset-x-0 bottom-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#7C3AED] to-transparent" />
 
@@ -31,9 +32,11 @@ export default function Footer() {
           {/* Col 1: Logo & Brand Pitch */}
           <div className="md:col-span-1.5 flex flex-col space-y-4 text-left">
             <div className="flex items-center space-x-2 cursor-pointer group" onClick={() => handleFooterNavClick('inicio')}>
-              <div className="flex items-center justify-center w-8 h-8 rounded border border-[#7C3AED]/40 bg-black shadow-[0_0_8px_rgba(124,58,237,0.1)]">
-                <span className="font-display font-extrabold text-white text-sm">KA</span>
-              </div>
+              <img 
+                src={kaTechLogo} 
+                alt="KA Tech Solutions" 
+                className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
               <div className="flex flex-col">
                 <span className="font-display font-black text-white text-sm leading-none tracking-wide">
                   KA TECH
@@ -44,7 +47,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <p className="text-xs text-gray-400 font-sans leading-relaxed max-w-xs">
+            <p className="text-sm text-gray-300 font-sans leading-relaxed max-w-xs">
               Aceleração comercial através de engenharia de software de alta performance. Desenvolvido sob medida para impulsionar empresas de Pirapora, MG e região norte-mineira.
             </p>
 
@@ -85,7 +88,7 @@ export default function Footer() {
             <h4 className="font-display font-bold text-xs uppercase tracking-widest text-[#7C3AED]">
               Navegação
             </h4>
-            <ul className="space-y-2.5 text-xs text-gray-400 font-sans">
+            <ul className="space-y-2.5 text-sm text-gray-300 font-sans">
               <li>
                 <button onClick={() => handleFooterNavClick('inicio')} className="hover:text-white transition-colors cursor-pointer">
                   Início
@@ -119,18 +122,18 @@ export default function Footer() {
             <h4 className="font-display font-bold text-xs uppercase tracking-widest text-[#7C3AED]">
               O que Desenvolvemos
             </h4>
-            <ul className="space-y-2.5 text-xs text-gray-400 font-sans">
+            <ul className="space-y-2.5 text-sm text-gray-300 font-sans">
               <li>
-                <span className="text-gray-400">Sites Comerciais Otimizados</span>
+                <span className="text-gray-300">Sites Comerciais Otimizados</span>
               </li>
               <li>
-                <span className="text-gray-400">Automações Inteligentes de WhatsApp</span>
+                <span className="text-gray-300">Automações Inteligentes de WhatsApp</span>
               </li>
               <li>
-                <span className="text-gray-400">Landing Pages Persuasivas (Vendas)</span>
+                <span className="text-gray-300">Landing Pages Persuasivas (Vendas)</span>
               </li>
               <li>
-                <span className="text-gray-400">Sistemas ERP com Gráficos Financeiros</span>
+                <span className="text-gray-300">Sistemas ERP com Gráficos Financeiros</span>
               </li>
             </ul>
           </div>
@@ -140,7 +143,7 @@ export default function Footer() {
             <h4 className="font-display font-bold text-xs uppercase tracking-widest text-[#7C3AED]">
               Atendimento Regional
             </h4>
-            <div className="space-y-3 text-xs text-gray-400 font-sans leading-relaxed">
+            <div className="space-y-3 text-sm text-gray-300 font-sans leading-relaxed">
               <p className="font-bold text-white uppercase tracking-wide">
                 KA Tech Solutions
               </p>
@@ -154,7 +157,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom credits */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm font-mono text-gray-400">
           <div>
             <span>&copy; {currentYear} KA Tech Solutions. Todos os direitos reservados.</span>
           </div>

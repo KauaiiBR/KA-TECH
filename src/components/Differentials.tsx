@@ -30,7 +30,7 @@ export default function Differentials() {
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight">
             Nossos <span className="text-[#7C3AED]">Diferenciais</span> Reais
           </h2>
-          <p className="text-sm sm:text-base text-gray-400 font-sans max-w-lg mx-auto">
+          <p className="text-base sm:text-lg text-gray-300 font-sans max-w-lg mx-auto">
             Além de criar códigos limpos, nós entregamos parceria comercial estratégica e presença local que nenhuma agência distante consegue oferecer.
           </p>
         </div>
@@ -46,21 +46,21 @@ export default function Differentials() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 key={diff.id}
-                className="group relative rounded-lg bg-[#141414] border border-neutral-900 p-6 hover:border-[#7C3AED]/30 transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+                className="group relative rounded-lg bg-[#1c1c1c] border border-neutral-700 p-6 hover:border-[#7C3AED]/30 transition-all duration-300 hover:shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
                 id={`differential-card-${diff.id}`}
               >
                 <div className="space-y-4">
                   {/* Icon badge */}
-                  <div className="flex items-center justify-center w-10 h-10 rounded bg-[#1A1A1A] border border-white/5 text-[#7C3AED] group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(124,58,237,0.2)] transition-all duration-300">
-                    <IconComp size={18} />
+                  <div className="flex items-center justify-center w-12 h-12 rounded bg-[#252525] border border-white/10 text-[#7C3AED] group-hover:scale-105 group-hover:shadow-[0_0_15px_rgba(124,58,237,0.2)] transition-all duration-300">
+                    <IconComp size={22} />
                   </div>
 
                   {/* Title and description */}
-                  <div className="space-y-1.5">
-                    <h3 className="font-display font-black text-base sm:text-lg text-white uppercase tracking-wide group-hover:text-[#7C3AED] transition-colors duration-300">
+                  <div className="space-y-2">
+                    <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-wide group-hover:text-[#7C3AED] transition-colors duration-300">
                       {diff.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-400 font-sans leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-300 font-sans leading-relaxed">
                       {diff.description}
                     </p>
                   </div>
@@ -83,16 +83,16 @@ export default function Differentials() {
           id="differentials-local-banner"
         >
           <div className="space-y-2 text-center md:text-left">
-            <h4 className="font-display font-black text-xl sm:text-2xl text-white uppercase">
+            <h4 className="font-display font-black text-2xl sm:text-3xl text-white uppercase">
               Procurando uma reunião presencial?
             </h4>
-            <p className="text-xs sm:text-sm text-gray-300 max-w-xl font-sans">
+            <p className="text-base sm:text-lg text-gray-300 max-w-xl font-sans">
               Estamos baseados em <span className="text-[#7C3AED] font-bold">Pirapora, MG</span>. Atendemos comerciantes, clínicas, distribuidoras e prestadores de serviços de forma próxima. Agende um café com nosso time técnico.
             </p>
           </div>
           <a
             href="#contato"
-            className="shrink-0 bg-transparent hover:bg-white/5 border border-white/10 hover:border-white/20 text-white font-display font-bold text-xs uppercase tracking-widest px-6 py-3.5 rounded transition-all duration-300"
+            className="shrink-0 bg-transparent hover:bg-white/5 border border-white/10 hover:border-white/20 text-white font-display font-bold text-sm uppercase tracking-widest px-6 py-3.5 rounded transition-all duration-300"
           >
             Agendar Reunião Presencial
           </a>

@@ -1,5 +1,6 @@
 import { ExternalLink, Code2, Sparkles, Cpu, Layers, CheckCircle2, User, Globe, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import fundadorPhoto from '../assets/images/fundador.png';
 
 export default function FounderShowcase() {
   const skills = [
@@ -56,29 +57,31 @@ export default function FounderShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative h-full flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#141414] to-[#0d0d0d] border border-neutral-800/80 p-8 shadow-2xl overflow-hidden group"
+              className="relative h-full flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#1c1c1c] to-[#141414] border border-neutral-700 p-8 shadow-2xl overflow-hidden group"
             >
               {/* Decorative light effect */}
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#7C3AED]/10 rounded-full filter blur-3xl group-hover:bg-[#7C3AED]/20 transition-all duration-500" />
               
               <div className="space-y-6 relative z-10">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-tr from-[#7C3AED] to-purple-400 p-0.5 shadow-md shadow-purple-900/30">
-                    <div className="w-full h-full rounded-[10px] bg-neutral-900 flex items-center justify-center text-white">
-                      <User size={28} className="text-[#7C3AED]" />
-                    </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden shadow-2xl shadow-purple-900/20 mb-4 flex-shrink-0">
+                    <img 
+                      src={fundadorPhoto} 
+                      alt="Kauã Ribeiro - Fundador da KA Tech" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
-                    <h3 className="font-display font-black text-xl text-white tracking-wide">
+                    <h3 className="font-display font-black text-2xl text-white tracking-wide">
                       Kauã Ribeiro da Paixão
                     </h3>
-                    <p className="text-xs text-[#7C3AED] font-mono tracking-wider uppercase font-semibold">
+                    <p className="text-sm text-[#7C3AED] font-mono tracking-wider uppercase font-semibold mt-1">
                       Desenvolvedor Principal & Fundador
                     </p>
                   </div>
                 </div>
 
-                <div className="space-y-4 font-sans text-sm text-gray-300 leading-relaxed font-light">
+                <div className="space-y-4 font-sans text-base text-gray-200 leading-relaxed font-light">
                   <p>
                     Olá! Sou o idealizador da <strong className="text-white font-medium">KA Tech Solutions</strong>. Sou desenvolvedor de software focado em criar soluções que realmente geram valor econômico e operacional.
                   </p>
@@ -88,15 +91,15 @@ export default function FounderShowcase() {
                 </div>
 
                 {/* Skills Showcase list */}
-                <div className="space-y-3 pt-4 border-t border-neutral-900">
-                  <h4 className="text-xs font-mono text-gray-400 uppercase tracking-widest font-semibold">
+                <div className="space-y-3 pt-4 border-t border-neutral-700">
+                  <h4 className="text-sm font-mono text-gray-300 uppercase tracking-widest font-semibold">
                     Habilidades Destacadas
                   </h4>
                   <div className="space-y-2">
                     {skills.map((skill, index) => (
-                      <div key={index} className="flex items-center justify-between text-xs bg-black/40 border border-neutral-900/60 rounded px-3 py-2">
-                        <span className="text-gray-300 flex items-center space-x-2">
-                          <CheckCircle2 size={12} className="text-[#7C3AED]" />
+                      <div key={index} className="flex items-center justify-between text-sm bg-black/40 border border-neutral-700 rounded px-3 py-2">
+                        <span className="text-gray-200 flex items-center space-x-2">
+                          <CheckCircle2 size={14} className="text-[#7C3AED]" />
                           <span>{skill.name}</span>
                         </span>
                         <span className="text-[10px] font-mono text-purple-400 font-semibold uppercase tracking-wider">
@@ -114,11 +117,11 @@ export default function FounderShowcase() {
                   href="https://kauapaixaoport.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn flex items-center justify-center space-x-2 w-full bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white py-3.5 px-5 rounded-lg font-display font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(124,58,237,0.15)] hover:shadow-[0_0_25px_rgba(124,58,237,0.35)] hover:scale-[1.01]"
+                  className="group/btn flex items-center justify-center space-x-3 w-full bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white py-5 px-6 rounded-xl font-display font-bold text-base uppercase tracking-wider transition-all duration-300 shadow-[0_0_25px_rgba(124,58,237,0.2)] hover:shadow-[0_0_35px_rgba(124,58,237,0.45)] hover:scale-[1.02] border border-[#7C3AED]/30"
                 >
-                  <Globe size={14} />
-                  <span>Conhecer Meu Portfólio</span>
-                  <ArrowUpRight size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                  <Globe size={20} />
+                  <span>Ver Todos os Meus Projetos</span>
+                  <ArrowUpRight size={18} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                 </a>
               </div>
             </motion.div>
@@ -144,16 +147,16 @@ export default function FounderShowcase() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={index}
-                  className="flex items-start space-x-4 rounded-xl bg-[#141414] border border-neutral-900/80 p-5 hover:border-neutral-800 transition-colors duration-300"
+                  className="flex items-start space-x-4 rounded-xl bg-[#1c1c1c] border border-neutral-700 p-5 hover:border-neutral-600 transition-colors duration-300"
                 >
                   <div className="flex-shrink-0 p-2.5 rounded-lg bg-[#7C3AED]/10 border border-[#7C3AED]/20">
                     {pillar.icon}
                   </div>
                   <div className="space-y-1">
-                    <h4 className="font-display font-bold text-sm text-white sm:text-base">
+                    <h4 className="font-display font-bold text-base text-white sm:text-lg">
                       {pillar.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-gray-400 font-sans font-light leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-300 font-sans font-light leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>
@@ -162,23 +165,23 @@ export default function FounderShowcase() {
             </div>
 
             {/* Quick quote block */}
-            <div className="rounded-xl border border-dashed border-neutral-800 p-5 bg-neutral-950/40 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#7C3AED] font-semibold">
+            <div className="rounded-xl border-2 border-[#7C3AED]/30 p-6 bg-gradient-to-r from-[#1c082f] via-[#0F0D0E] to-[#121212] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_0_30px_rgba(124,58,237,0.1)]">
+              <div className="space-y-2">
+                <span className="text-base font-mono uppercase tracking-widest text-[#7C3AED] font-bold">
                   Quer ver os projetos desenvolvidos?
                 </span>
-                <p className="text-xs text-gray-400 font-sans">
-                  Acesse o portfólio completo do Kauã para ver sistemas de faturamento, landing pages e automações ativas.
+                <p className="text-lg text-gray-200 font-sans">
+                  Acesse o portfólio completo do Kauã — sistemas, landing pages, automações e mais.
                 </p>
               </div>
               <a
                 href="https://kauapaixaoport.netlify.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-1.5 text-xs text-white hover:text-[#7C3AED] font-bold uppercase tracking-wider transition-colors py-2 px-3 border border-neutral-800 hover:border-[#7C3AED]/40 rounded bg-black/20"
+                className="flex items-center space-x-2 text-base text-white hover:text-[#7C3AED] font-bold uppercase tracking-wider transition-colors py-3 px-5 border-2 border-[#7C3AED]/40 hover:border-[#7C3AED] rounded-lg bg-[#7C3AED]/10 hover:bg-[#7C3AED]/20 shadow-[0_0_15px_rgba(124,58,237,0.15)]"
               >
-                <span>Ver Portfólio</span>
-                <ExternalLink size={12} />
+                <span>Abrir Portfólio</span>
+                <ExternalLink size={16} />
               </a>
             </div>
           </div>

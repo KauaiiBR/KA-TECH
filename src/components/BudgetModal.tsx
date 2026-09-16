@@ -128,7 +128,7 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 15 }}
             transition={{ type: 'spring', duration: 0.5 }}
-            className="relative bg-[#141414] border border-neutral-800 rounded-xl max-w-lg w-full overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.8)] z-10 p-6 sm:p-8"
+            className="relative bg-[#1c1c1c] border border-neutral-700 rounded-xl max-w-lg w-full overflow-hidden shadow-[0_25px_50px_rgba(0,0,0,0.8)] z-10 p-6 sm:p-8"
             id="budget-modal-container"
           >
             
@@ -149,10 +149,10 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
               {!isSuccess ? (
                 <form onSubmit={handleSubmit} className="space-y-4" id="budget-modal-form">
                   <div className="text-left">
-                    <h3 className="font-display font-black text-xl text-white uppercase">
+                    <h3 className="font-display font-black text-2xl text-white uppercase">
                       Solicitar Orçamento Rápido
                     </h3>
-                    <p className="text-xs text-gray-400 font-sans">
+                    <p className="text-sm text-gray-300 font-sans">
                       Dê o primeiro passo para elevar o patamar tecnológico da sua empresa.
                     </p>
                   </div>
@@ -163,11 +163,11 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
                     </div>
                   )}
 
-                  <div className="space-y-3.5 text-left font-sans text-xs sm:text-sm">
+                  <div className="space-y-3.5 text-left font-sans text-sm sm:text-base">
                     
                     {/* Name input */}
                     <div className="flex flex-col space-y-1">
-                      <label className="text-xs font-bold text-gray-300 font-mono">Seu Nome *</label>
+                      <label className="text-sm font-bold text-gray-200 font-mono">Seu Nome *</label>
                       <input
                         type="text"
                         name="name"
@@ -175,14 +175,14 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Ex: Geraldo Fonseca"
-                        className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-3.5 py-2 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
+                        className="w-full bg-[#121212] border border-neutral-700 rounded px-3.5 py-2.5 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {/* Email */}
                       <div className="flex flex-col space-y-1">
-                        <label className="text-xs font-bold text-gray-300 font-mono">E-mail de Contato *</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono">E-mail de Contato *</label>
                         <input
                           type="email"
                           name="email"
@@ -190,13 +190,13 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
                           value={formData.email}
                           onChange={handleInputChange}
                           placeholder="geraldo@saofrancisco.com"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-3.5 py-2 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-3.5 py-2.5 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
                         />
                       </div>
 
                       {/* Phone */}
                       <div className="flex flex-col space-y-1">
-                        <label className="text-xs font-bold text-gray-300 font-mono">WhatsApp *</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono">WhatsApp *</label>
                         <input
                           type="tel"
                           name="phone"
@@ -204,7 +204,7 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
                           value={formData.phone}
                           onChange={handleInputChange}
                           placeholder="(38) 99999-9999"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-3.5 py-2 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-3.5 py-2.5 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
                         />
                       </div>
                     </div>
@@ -212,28 +212,28 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {/* Company */}
                       <div className="flex flex-col space-y-1">
-                        <label className="text-xs font-bold text-gray-300 font-mono">Sua Empresa (Opcional)</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono">Sua Empresa (Opcional)</label>
                         <input
                           type="text"
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
                           placeholder="Distribuidora S. Francisco"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-3.5 py-2 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-3.5 py-2.5 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
                         />
                       </div>
 
                       {/* Service Selector */}
                       <div className="flex flex-col space-y-1">
-                        <label className="text-xs font-bold text-gray-300 font-mono">Serviço de Interesse</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono">Serviço de Interesse</label>
                         <select
                           name="service"
                           value={formData.service}
                           onChange={handleInputChange}
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-3.5 py-2 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-3.5 py-2.5 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED]"
                         >
                           {servicesList.map((srv) => (
-                            <option key={srv} value={srv} className="bg-[#141414]">
+                            <option key={srv} value={srv} className="bg-[#1c1c1c]">
                               {srv}
                             </option>
                           ))}
@@ -243,14 +243,14 @@ export default function BudgetModal({ isOpen, onClose, presetService = '' }: Bud
 
                     {/* Additional Message */}
                     <div className="flex flex-col space-y-1">
-                      <label className="text-xs font-bold text-gray-300 font-mono">Detalhes Adicionais (Opcional)</label>
+                      <label className="text-sm font-bold text-gray-200 font-mono">Detalhes Adicionais (Opcional)</label>
                       <textarea
                         name="message"
                         rows={3}
                         value={formData.message}
                         onChange={handleInputChange}
                         placeholder="Ex: Gostaria de integrar com emissão fiscal ou suporte prioritário..."
-                        className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-3.5 py-2 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] resize-none"
+                        className="w-full bg-[#121212] border border-neutral-700 rounded px-3.5 py-2.5 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] resize-none"
                       />
                     </div>
 

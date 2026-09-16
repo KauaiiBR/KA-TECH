@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, Phone, CheckCircle, ArrowUpRight, MessageSquareCode, Database, Trash2, Calendar, FileSpreadsheet } from 'lucide-react';
+import { Send, Phone, CheckCircle, ArrowUpRight, MessageSquareCode, Database, Trash2, Calendar, FileSpreadsheet, Globe, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ContactSubmission } from '../types';
 
@@ -178,18 +178,18 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
             </div>
 
             {/* Quick Contact Specs */}
-            <div className="space-y-4 font-sans text-sm" id="contact-quick-specs">
-              <div className="flex items-center space-x-4 bg-neutral-900/40 p-4 rounded-lg border border-neutral-900">
+            <div className="space-y-4 font-sans text-base" id="contact-quick-specs">
+              <div className="flex items-center space-x-4 bg-[#1c1c1c] p-4 rounded-lg border border-neutral-700">
                 <div className="w-10 h-10 rounded bg-[#7C3AED]/5 flex items-center justify-center border border-[#7C3AED]/20 text-[#7C3AED]">
                   <Phone size={16} />
                 </div>
                 <div className="flex flex-col text-left">
-                  <span className="text-[10px] uppercase font-mono tracking-wider text-gray-500 font-bold">Atendimento WhatsApp</span>
+                  <span className="text-[10px] uppercase font-mono tracking-wider text-gray-400 font-bold">Atendimento WhatsApp</span>
                   <a href="https://api.whatsapp.com/send?phone=5538999406432" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#7C3AED] font-bold font-mono transition-colors">(38) 99940-6432</a>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 bg-neutral-900/40 p-4 rounded-lg border border-neutral-900">
+              <div className="flex items-center space-x-4 bg-[#1c1c1c] p-4 rounded-lg border border-neutral-700">
                 <div className="w-10 h-10 rounded bg-[#7C3AED]/5 flex items-center justify-center border border-[#7C3AED]/20 text-[#7C3AED]">
                   <MessageSquareCode size={16} />
                 </div>
@@ -200,17 +200,29 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
               </div>
             </div>
 
-            <div className="bg-[#141414] border border-neutral-900 rounded-lg p-5">
-              <span className="text-xs uppercase font-mono tracking-widest text-[#7C3AED] font-bold">Presença Presencial</span>
-              <p className="text-xs text-gray-400 mt-2 font-sans leading-relaxed">
+            <div className="bg-[#1c1c1c] border border-neutral-700 rounded-lg p-5">
+              <span className="text-sm uppercase font-mono tracking-widest text-[#7C3AED] font-bold">Presença Presencial</span>
+              <p className="text-sm text-gray-300 mt-2 font-sans leading-relaxed">
                 Pirapora, MG — Agende um encontro em nosso escritório ou em sua própria empresa e descubra soluções customizadas para seu modelo de vendas.
               </p>
             </div>
+
+            {/* Portfolio CTA */}
+            <a
+              href="https://kauapaixaoport.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-3 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white py-4 px-6 rounded-lg font-display font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_rgba(124,58,237,0.2)] hover:shadow-[0_0_30px_rgba(124,58,237,0.4)] hover:scale-[1.02] border border-[#7C3AED]/30"
+            >
+              <Globe size={18} />
+              <span>Ver Portfólio Completo de Projetos</span>
+              <ExternalLink size={16} />
+            </a>
           </div>
 
           {/* Form container (7 columns) */}
           <div className="lg:col-span-7" id="contact-form-container">
-            <div className="bg-[#141414] border border-neutral-900 rounded-xl p-6 sm:p-8 relative shadow-2xl">
+            <div className="bg-[#1c1c1c] border border-neutral-700 rounded-xl p-6 sm:p-8 relative shadow-2xl">
               
               {/* Purple outline accent top border */}
               <div className="absolute top-0 left-6 right-6 h-[2px] bg-[#7C3AED]" />
@@ -227,10 +239,10 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                     id="tech-leads-form"
                   >
                     <div className="text-left font-sans">
-                      <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-wide">
+                      <h3 className="font-display font-black text-xl sm:text-2xl text-white uppercase tracking-wide">
                         Diagnóstico Comercial Rápido
                       </h3>
-                      <p className="text-xs text-gray-400">
+                      <p className="text-sm text-gray-300">
                         Preencha suas informações originais e descreva suas pretensões.
                       </p>
                     </div>
@@ -244,7 +256,7 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Name input */}
                       <div className="flex flex-col text-left space-y-1.5">
-                        <label className="text-xs font-bold text-gray-300 font-mono" htmlFor="form-name">Nome Completo *</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono" htmlFor="form-name">Nome Completo *</label>
                         <input
                           type="text"
                           id="form-name"
@@ -253,13 +265,13 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                           value={formData.name}
                           onChange={handleInputChange}
                           placeholder="Ex: Geraldo Fonseca"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-700"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-4 py-3 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-600"
                         />
                       </div>
 
                       {/* Email input */}
                       <div className="flex flex-col text-left space-y-1.5">
-                        <label className="text-xs font-bold text-gray-300 font-mono" htmlFor="form-email">E-mail Corporativo *</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono" htmlFor="form-email">E-mail Corporativo *</label>
                         <input
                           type="email"
                           id="form-email"
@@ -268,7 +280,7 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                           value={formData.email}
                           onChange={handleInputChange}
                           placeholder="Ex: geraldo@empresa.com"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-700"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-4 py-3 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-600"
                         />
                       </div>
                     </div>
@@ -276,7 +288,7 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Phone/WhatsApp input */}
                       <div className="flex flex-col text-left space-y-1.5">
-                        <label className="text-xs font-bold text-gray-300 font-mono" htmlFor="form-phone">WhatsApp/Telefone *</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono" htmlFor="form-phone">WhatsApp/Telefone *</label>
                         <input
                           type="tel"
                           id="form-phone"
@@ -285,13 +297,13 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                           value={formData.phone}
                           onChange={handleInputChange}
                           placeholder="Ex: (38) 99999-9999"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-700"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-4 py-3 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-600"
                         />
                       </div>
 
                       {/* Company input */}
                       <div className="flex flex-col text-left space-y-1.5">
-                        <label className="text-xs font-bold text-gray-300 font-mono" htmlFor="form-company">Nome da Empresa (Opcional)</label>
+                        <label className="text-sm font-bold text-gray-200 font-mono" htmlFor="form-company">Nome da Empresa (Opcional)</label>
                         <input
                           type="text"
                           id="form-company"
@@ -299,14 +311,14 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                           value={formData.company}
                           onChange={handleInputChange}
                           placeholder="Ex: Distribuidora São Francisco"
-                          className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-700"
+                          className="w-full bg-[#121212] border border-neutral-700 rounded px-4 py-3 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-600"
                         />
                       </div>
                     </div>
 
                     {/* Message textarea */}
                     <div className="flex flex-col text-left space-y-1.5">
-                      <label className="text-xs font-bold text-gray-300 font-mono" htmlFor="form-message">Sua Mensagem / Desafios do Negócio *</label>
+                      <label className="text-sm font-bold text-gray-200 font-mono" htmlFor="form-message">Sua Mensagem / Desafios do Negócio *</label>
                       <textarea
                         id="form-message"
                         name="message"
@@ -315,7 +327,7 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
                         value={formData.message}
                         onChange={handleInputChange}
                         placeholder="Descreva o que sua empresa necessita (Ex: site institucional, chatbot de WhatsApp, ERP integrado)..."
-                        className="w-full bg-[#0A0A0A] border border-neutral-800 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-700 resize-none"
+                        className="w-full bg-[#121212] border border-neutral-700 rounded px-4 py-3 text-base text-white focus:outline-none focus:border-[#7C3AED] focus:ring-1 focus:ring-[#7C3AED] transition-all hover:border-neutral-600 resize-none"
                       />
                     </div>
 
@@ -394,15 +406,15 @@ export default function ContactForm({ initialSubject = '' }: ContactFormProps) {
         </div>
 
         {/* Local database lead log Section (Interactive CRM Module) */}
-        <div className="mt-16 border-t border-neutral-900 pt-10 text-left" id="submissions-monitor-section">
+        <div className="mt-16 border-t border-neutral-700 pt-10 text-left" id="submissions-monitor-section">
           <div className="flex items-center justify-between flex-wrap gap-4 mb-4">
             <div className="flex items-center space-x-2.5">
-              <Database size={18} className="text-[#7C3AED]" />
+              <Database size={20} className="text-[#7C3AED]" />
               <div>
-                <h4 className="text-sm font-display font-black text-white uppercase tracking-wider">
+                <h4 className="text-base font-display font-black text-white uppercase tracking-wider">
                   Simulador de Banco de Dados de Contatos
                 </h4>
-                <p className="text-xs text-gray-500 font-sans">
+                <p className="text-sm text-gray-400 font-sans">
                   Sendo um site institucional estático para demonstração comercial, todas as solicitações enviadas permanecem salvas localmente no localStorage do seu navegador de forma segura.
                 </p>
               </div>

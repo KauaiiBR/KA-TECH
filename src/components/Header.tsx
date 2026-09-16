@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import kaTechLogo from '../assets/images/LogoPrincipal.png';
 
 interface HeaderProps {
   onOpenBudgetModal: () => void;
@@ -73,20 +74,18 @@ export default function Header({ onOpenBudgetModal }: HeaderProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo initials: K & A */}
+            {/* Logo */}
             <div 
               onClick={() => handleNavClick('inicio')}
               className="flex items-center space-x-2 cursor-pointer group"
               id="header-logo"
             >
-              <div className="relative flex items-center justify-center w-10 h-10 rounded border border-[#7C3AED]/50 bg-black group-hover:border-[#7C3AED] transition-all duration-300 shadow-[0_0_10px_rgba(124,58,237,0.15)] group-hover:shadow-[0_0_15px_rgba(124,58,237,0.3)]">
-                <span className="font-display font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-200 to-[#7C3AED] text-lg tracking-tighter">
-                  KA
-                </span>
-                <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-[#7C3AED] rounded-full animate-ping opacity-60" />
-                <div className="absolute -bottom-1 -right-1 w-2.5 h-2.5 bg-[#7C3AED] rounded-full" />
-              </div>
-              <div className="flex flex-col">
+              <img 
+                src={kaTechLogo} 
+                alt="KA Tech Solutions" 
+                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="flex flex-col hidden sm:block">
                 <span className="font-display font-black text-white text-base leading-none tracking-wider group-hover:text-[#7C3AED] transition-colors duration-300">
                   KA TECH
                 </span>
