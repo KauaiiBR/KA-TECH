@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Globe, ArrowUpRight, Zap, ShoppingCart, Scissors, Pizza, Utensils, Rocket } from 'lucide-react';
 import { motion } from 'motion/react';
 import fundadorPhoto from '../assets/images/fundador.png';
 
@@ -8,7 +8,7 @@ export default function FounderShowcase() {
       title: 'KA Tech Solutions',
       description: 'Site institucional completo para empresa de tecnologia, com orçamento rápido, formulário e apresentação profissional.',
       url: 'https://ka-tech.onrender.com',
-      icon: 'fas fa-bolt',
+      icon: Zap,
       gradient: 'from-[#7C3AED] to-[#1a1a1a]',
       tags: ['React', 'Vite', 'Tailwind'],
     },
@@ -16,7 +16,7 @@ export default function FounderShowcase() {
       title: 'KARPE Company',
       description: 'E-commerce com catálogo, carrinho, integração administrativa e identidade visual moderna para marca jovem.',
       url: 'https://karpcompany.netlify.app',
-      icon: 'fas fa-shopping-cart',
+      icon: ShoppingCart,
       gradient: 'from-[#1a1a1a] to-[#2d2d2d]',
       tags: ['E-commerce', 'Node.js', 'API'],
     },
@@ -24,7 +24,7 @@ export default function FounderShowcase() {
       title: 'Barbearia Blade',
       description: 'Site premium para barbearia com estética clássica, agendamento online e experiência responsiva.',
       url: 'https://barbearia-blade.netlify.app',
-      icon: 'fas fa-cut',
+      icon: Scissors,
       gradient: 'from-[#c9a96e] to-[#1a1a1a]',
       tags: ['Next.js', 'Tailwind', 'MongoDB'],
     },
@@ -32,7 +32,7 @@ export default function FounderShowcase() {
       title: 'Sonic Pizzas',
       description: 'Landing page comercial para pizzaria com cardápio, visual chamativo e pedido via WhatsApp.',
       url: 'https://sonicpizzas.netlify.app',
-      icon: 'fas fa-pizza-slice',
+      icon: Pizza,
       gradient: 'from-[#e63946] to-[#1a1a1a]',
       tags: ['HTML', 'CSS', 'WhatsApp'],
     },
@@ -40,7 +40,7 @@ export default function FounderShowcase() {
       title: 'Restaurante Elegante',
       description: 'Site institucional para restaurante com cardápio digital, galeria, reservas e visual sofisticado.',
       url: 'https://restauranteelegancy.netlify.app',
-      icon: 'fas fa-utensils',
+      icon: Utensils,
       gradient: 'from-[#2d2d2d] to-[#1a1a1a]',
       tags: ['HTML', 'CSS', 'Responsivo'],
     },
@@ -48,7 +48,7 @@ export default function FounderShowcase() {
       title: 'Trajetória Descubra+',
       description: 'Sistema de hackathon com login, perfis de simulação, dashboard e trilhas de inclusão profissional.',
       url: 'https://descubramais.netlify.app',
-      icon: 'fas fa-rocket',
+      icon: Rocket,
       gradient: 'from-[#10B981] to-[#1a1a1a]',
       tags: ['React', 'Dashboard', 'Auth'],
     },
@@ -148,7 +148,10 @@ export default function FounderShowcase() {
 
             {/* Projects Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {projects.map((project) => (
+              {projects.map((project) => {
+                const ProjectIcon = project.icon;
+
+                return (
                 <a
                   key={project.title}
                   href={project.url}
@@ -159,8 +162,8 @@ export default function FounderShowcase() {
                   <div className={`relative h-28 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.20),transparent_35%)] opacity-70" />
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-[#10B981]/10 transition-colors duration-300" />
-                    <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-white/15 bg-black/25 shadow-2xl transition-transform duration-300 group-hover:scale-110">
-                      <i className={`${project.icon} text-2xl text-white`}></i>
+                    <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-white/15 bg-black/25 text-white shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                      <ProjectIcon size={30} strokeWidth={2.4} />
                     </div>
                   </div>
 
@@ -190,7 +193,8 @@ export default function FounderShowcase() {
                     </div>
                   </div>
                 </a>
-              ))}
+                );
+              })}
             </div>
 
             {/* Ver portfólio completo */}
