@@ -1,17 +1,9 @@
-import { ExternalLink, Globe, ArrowUpRight, Zap, ShoppingCart, Scissors, Pizza, Utensils, Rocket } from 'lucide-react';
+import { ExternalLink, Globe, ArrowUpRight, ShoppingCart, Scissors, Pizza, Utensils, Rocket } from 'lucide-react';
 import { motion } from 'motion/react';
 import fundadorPhoto from '../assets/images/fundador.png';
 
 export default function FounderShowcase() {
   const projects = [
-    {
-      title: 'KA Tech Solutions',
-      description: 'Site institucional completo para empresa de tecnologia, com orçamento rápido, formulário e apresentação profissional.',
-      url: 'https://ka-tech.onrender.com',
-      icon: Zap,
-      gradient: 'from-[#7C3AED] to-[#1a1a1a]',
-      tags: ['React', 'Vite', 'Tailwind'],
-    },
     {
       title: 'KARPE Company',
       description: 'E-commerce com catálogo, carrinho, integração administrativa e identidade visual moderna para marca jovem.',
