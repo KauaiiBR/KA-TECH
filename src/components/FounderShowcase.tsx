@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, ArrowUpRight, ShoppingCart, Scissors, Pizza, Utensils, Rocket } from 'lucide-react';
+import { ExternalLink, Globe, ArrowUpRight, ShoppingCart, Scissors, Pizza, Utensils, Compass } from 'lucide-react';
 import { motion } from 'motion/react';
 import fundadorPhoto from '../assets/images/fundador.png';
 
@@ -40,7 +40,7 @@ export default function FounderShowcase() {
       title: 'Trajetória Descubra+',
       description: 'Sistema de hackathon com login, perfis de simulação, dashboard e trilhas de inclusão profissional.',
       url: 'https://descubramais.netlify.app',
-      icon: Rocket,
+      icon: Compass,
       gradient: 'from-[#10B981] to-[#1a1a1a]',
       tags: ['React', 'Dashboard', 'Auth'],
     },
@@ -103,7 +103,7 @@ export default function FounderShowcase() {
                     Olá! Sou o idealizador da <strong className="text-white font-medium">KA Tech Solutions</strong>. Sou desenvolvedor de software focado em criar soluções que realmente geram valor econômico e operacional.
                   </p>
                   <p>
-                    Acredito que o comércio e os prestadores de serviços de Pirapora e região merecem tecnologia de ponta, sem enrolação e sem amarras. Por isso, fundei a KA Tech com um objetivo claro: <strong className="text-white font-medium">unir design impecável, código de alta performance e transparência total</strong>.
+                    Acredito que o comércio e os prestadores de serviços de Pirapora e região merecem tecnologia de ponta, sem enrolação e sem amarras. Por isso, fundei a KA Tech e com minha equipe temos um objetivo bem claro: <strong className="text-white font-medium">unir design impecável, código de alta performance e transparência total</strong>.
                   </p>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function FounderShowcase() {
                 Projetos Desenvolvidos
               </h3>
               <p className="text-base text-gray-300 font-sans leading-relaxed">
-                Uma vitrine dos projetos entregues, com links diretos para você navegar e avaliar o resultado final.
+                Uma vitrine dos projetos feitos, com links diretos para você navegar e avaliar o resultado final.
               </p>
             </div>
 
